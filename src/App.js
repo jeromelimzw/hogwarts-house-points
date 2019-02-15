@@ -18,7 +18,7 @@ class App extends Component {
   }
 
   winningHouse = () => {
-    return this.state.countArr.sort((a, b) => b.value - a.value)[0].color;
+    return this.state.countArr.sort((a, b) => b.value - a.value);
   };
 
   total = () => {
@@ -45,7 +45,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div>
         <CounterList
           countArr={this.state.countArr}
           handleUp={this.handleUp}

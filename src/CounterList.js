@@ -4,7 +4,7 @@ import Counter from "./Counter";
 class CounterList extends Component {
   render() {
     return (
-      <React.Fragment>
+      <div>
         {this.props.countArr
           .sort((a, b) => b.value - a.value)
           .map(counter => {
@@ -18,7 +18,7 @@ class CounterList extends Component {
               />
             );
           })}
-      </React.Fragment>
+      </div>
     );
   }
 }

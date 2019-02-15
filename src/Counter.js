@@ -6,14 +6,14 @@ class Counter extends Component {
 
   render() {
     return (
-      <div className="flex content-center">
+      <div className="flex content-center justify-between">
         <img
           src={this.props.imgUrl}
-          width="50"
-          height="50"
-          className="mv1 mh1 br3 shadow-5"
+          width="150"
+          height="150"
+          className="mv1 mh2 br3 shadow-5"
         />
-        <div className="f3 ba bw1 br2 mv2 b--light-blue flex justify-between pa1 bg-black shadow-5">
+        <div className="f1 ba bw1 br2 mv2 b--light-blue flex pa2 bg-black shadow-5 w-90 self-center">
           <i className="fas fa-arrow-down red grow" onClick={this.onDownVote} />
           <span
             className={` ${
@@ -22,7 +22,7 @@ class Counter extends Component {
                 : this.props.count > 0
                 ? "green"
                 : "white"
-            }`}
+            } ph2`}
           >
             {this.props.count}
           </span>
