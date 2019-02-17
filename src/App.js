@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import CounterList from "./CounterList";
 import Total from "./Total";
 import counters from "./counterGen";
+import Header from "./Header";
 
 class App extends Component {
   constructor() {
@@ -16,14 +17,6 @@ class App extends Component {
       countArr: counters
     });
   }
-
-  winningHouse = () => {
-    return this.state.countArr.sort((a, b) => b.value - a.value);
-  };
-
-  total = () => {
-    return this.state.countArr.reduce((a, b) => a + b.value, 0);
-  };
 
   handleUp = tarId => {
     const nextArr = this.state.countArr.map(count => {
@@ -44,14 +37,20 @@ class App extends Component {
   };
 
   render() {
+    const { countArr } = this.state;
+    const { handleUp, handleDown } = this;
+    const sortedArr = countArr.sort((a, b) => b.value - a.value);
+    const total = countArr.reduce((a, b) => a + b.value, 0);
+
     return (
-      <div>
+      <div className="">
+        <Header />
         <CounterList
-          countArr={this.state.countArr}
-          handleUp={this.handleUp}
-          handleDown={this.handleDown}
+          countArr={sortedArr}
+          handleUp={handleUp}
+          handleDown={handleDown}
         />
-        <Total total={this.total()} />
+        <Total total={total} />
       </div>
     );
   }

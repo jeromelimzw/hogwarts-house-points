@@ -3,18 +3,21 @@ import Counter from "./Counter";
 
 class CounterList extends Component {
   render() {
+    const { countArr, handleUp, handleDown } = this.props;
     return (
       <div>
-        {this.props.countArr
+        {countArr
           .sort((a, b) => b.value - a.value)
           .map(counter => {
             return (
               <Counter
                 count={counter.value}
-                handleUp={this.props.handleUp}
-                handleDown={this.props.handleDown}
+                handleUp={handleUp}
+                handleDown={handleDown}
                 imgUrl={counter.imgUrl}
                 id={counter.id}
+                key={counter.key}
+                color={counter.color}
               />
             );
           })}

@@ -1,5 +1,3 @@
-import { green } from "ansi-colors";
-
 const randGen = () => {
   return Math.round(Math.random() * 10);
 };
@@ -12,28 +10,36 @@ function b(a) {
 
 const counters = [
   {
-    id: b(),
+    id: 0,
     value: randGen(),
     imgUrl: "/img/Gryffindor.png",
-    color: "red"
+    color: "light-red",
+    house: "Gryffindor",
+    key: b()
   },
   {
-    id: b(),
+    id: 1,
     value: randGen(),
     imgUrl: "/img/Slytherin.png",
-    color: "green"
+    color: "light-green",
+    house: "Slytherin",
+    key: b()
   },
   {
-    id: b(),
+    id: 2,
     value: randGen(),
     imgUrl: "/img/Hufflepuff.png",
-    color: "yellow"
+    color: "light-yellow",
+    house: "Hufflepuff",
+    key: b()
   },
   {
-    id: b(),
+    id: 3,
     value: randGen(),
     imgUrl: "/img/Ravenclaw.png",
-    color: "blue"
+    color: "light-blue",
+    house: "Ravenclaw",
+    key: b()
   }
 ];
 
