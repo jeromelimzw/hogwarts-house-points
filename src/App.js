@@ -43,7 +43,7 @@ class App extends Component {
     const total = countArr.reduce((a, b) => a + b.value, 0);
 
     return (
-      <div className="">
+      <div className="mt5 ">
         <Header />
         <CounterList
           countArr={sortedArr}

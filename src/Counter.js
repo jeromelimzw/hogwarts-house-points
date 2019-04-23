@@ -9,14 +9,13 @@ class Counter extends Component {
     const { onUpVote, onDownVote } = this;
 
     return (
-      <div className="flex content-center justify-around o-90">
+      <div className="flex content-center justify-between o-90">
         <img
           src={imgUrl}
           width="140"
           height="140"
-          className={`mv1 br3 hide-child shadow-5 grow ba bw2 pointer b--${color}`}
+          className={`mv1 br3 shadow-5 ba bw2  b--${color}`}
           alt={house}
-          onClick={onUpVote}
         />
         <div className="f1 bw1 o-95 flex w-70 self-center justify-between">
           <i
